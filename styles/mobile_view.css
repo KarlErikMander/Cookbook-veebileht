@@ -1,0 +1,185 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+/* Header css rules*/
+header {
+    width: 100%;
+    height: 30%
+}
+
+header .title {
+    /* Center the text with flex*/
+    display: flex;
+    justify-content: center;
+    padding: 4% 0% 2% 0%;
+    /* Adaptive font size*/
+    font-size: 9vw;
+}
+
+header .subtext {
+    /*Center the text with flex*/
+    display: flex;
+    justify-content: center;
+    padding: 0% 0% 2% 0%;
+    /*Adaptive font size*/
+    font-size: 4vw;
+}
+
+header .line_container {
+    /*Center the child element with flex*/
+    display: flex;
+    justify-content: center;
+}
+
+header .line_container .line{
+    /*Create line with width*/
+    border: grey 1px solid;
+    width: 60%; 
+}
+
+/* Navbar css rules*/
+nav{
+    /*Create navigation bar with flex*/
+    font-size: 4vw;
+    margin: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav a{
+    /*Remove link decoration*/
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main */
+main img{
+    /*Image will size itself to parent size*/
+    width: 100%;
+}
+
+main .description_container{
+    margin: 3% 6% 3% 6%;
+}
+
+main .description_container .image_container{
+    /*Hide the desktop only picture */
+    width: 0%;
+    height: 0%;
+    visibility: hidden;
+}
+
+main .description_container .description h3{
+    /*Adaptive font size for title*/
+    margin: 2% 0% 2% 0%;
+    font-size: 5vw;
+}
+
+main .description_container p{
+    /*adaptive font size for text*/
+    margin: 2% 0% 2% 0%;
+    font-size: 4vw;
+}
+
+main .recipe_container {
+    /*Container for recipes. Center ,set flex direction and justify content for spaced column recipes*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .recipe_title{
+    /*Adaptive font size for title*/
+    margin: 3% 0% 2% 6%;
+    font-size: 5vw;
+}
+
+main .recipe_container .recipe {
+    /*Set the recipe element size and make its position relative for the text to be on top of the picture*/
+    position: relative;
+    margin: 2%;
+    width: 35%;
+    height: 35%;
+
+}
+
+main .recipe_container .recipe p{
+    /* center the text */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Get the text on top of the image*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* Set the text properties*/
+    font-size: 4vw;
+    color: rgb(255, 255, 255);
+    text-shadow:2px 2px 2px black;
+
+}
+
+main .recipe_container .recipe img{
+    /*Make the image circle. NB image must have 1:1 ratio for it to be circle*/
+    border-radius: 50%;
+}
+
+/* Footer */
+
+
+footer {
+    /*Set the backround and the direction of the elements with flex*/
+    display: flex;
+    flex-direction: row;
+    background: grey;
+}
+
+footer .contact_info_container{
+    /*Set the elements to the right position*/
+    padding: 6% 0% 6% 4%;
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+footer .contact_info_container p{
+    /*Set text color and the text size*/
+    color: darkgray;
+    font-size: 3vw;
+}
+
+footer .social_platform_icons_container{
+    /*Set the element to flex and make elements show in column with spaced formating*/
+    padding: 1% 0% 1% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+footer .logo_link_insta {
+    /*Set the element image with css for link to work correctly*/
+    background-image: url("../resources/instagram logo.png");
+    background-size: contain;
+    width: 7vw;
+    height: 7vw;
+}
+
+footer .logo_link_fb {
+    /*Set the element image with css for link to work correctly*/
+    background-image: url("../resources/facebook logo.png");
+    background-size: contain;
+    width: 7vw;
+    height: 7vw;
+}

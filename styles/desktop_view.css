@@ -1,0 +1,199 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+/* Header css rules*/
+header {
+    width: 100%;
+    height: 30%
+}
+
+header .title {
+    /* Center the text with flex*/
+    display: flex;
+    justify-content: center;
+    padding: 4% 0% 2% 0%;
+    /* Adaptive font size*/
+    font-size: 5vw;
+}
+
+header .subtext {
+    /*Center the text with flex*/
+    display: flex;
+    /*Adaptive font size*/
+    font-size: 1.7vw;
+    justify-content: center;
+    padding: 0% 0% 2% 0%;
+}
+
+
+
+/* Navbar css rules*/
+nav{
+    /*Create navigation bar with flex*/
+    font-size: 1.7vw;
+    margin: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav a{
+    /*Remove link decoration*/
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main */
+main .image_container{
+    /*Set container to max width and set container content to center*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+main .image_container img{
+    /*Leave 10% of width so the image doesnt touch page edges*/
+    width: 90%; 
+}
+
+
+main .description_container{
+    /*Set container to flex and its elements direction to row. Set container size*/
+    width: 100%;
+    padding: 3% 0% 3% 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main .description_container .description{
+    /*Set container size and adaptive font size*/
+    width: 40%;
+    font-size: 1.7vw;
+}
+main .description_container .image_container .description_image{
+    /*Image will size itself to parent size*/
+    width: 100%;
+}
+main .description_container .image_container{
+    /*Image takes the size what is left of the description container */
+    width: 40%;
+}
+main .description_container .description h3{
+    margin: 2% 0% 2% 0%;
+}
+main .description_container p{
+    margin: 1% 0% 1% 0%;
+}
+
+main .recipe_container {
+    /*Container for recipes. Center ,set flex direction and justify content for spaced column recipes*/
+    padding: 3% 3% 3% 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+main .recipe_title{
+    /*Hide the title in desktop version*/
+    visibility: hidden;
+}
+
+main .recipe_container .recipe {
+    /*Set the recipe element size and make its position relative for the text to be on top of the picture*/
+    position: relative;
+    margin: 2%;
+    width: 25%;
+    height: 25%;
+    opacity: 1;
+    /*Set transition for opacity*/
+    /*Ripped from stackoverflow https://stackoverflow.com/questions/10565587/css-transition-opacity-on-mouse-out*/
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+main .recipe_container .recipe:hover {
+    opacity: 0.8;
+}
+
+main .recipe_container .recipe p{
+    /* center the text */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Get the text on top of the image*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* Set the text properties*/
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
+    text-shadow:1px 1px 1px black;
+
+}
+main .recipe_container .recipe img{
+    /*Make the image circle. NB image must have 1:1 ratio for it to be circle*/
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+
+footer {
+    /*Set the backround and the direction of the elements with flex*/
+    display: flex;
+    flex-direction: row;
+    background: grey;
+}
+
+footer .contact_info_container{
+    /*Set the elements to the right position*/
+    padding: 6% 0% 6% 4%;
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+footer .contact_info_container p{
+    /*Set text color and the text size*/
+    color: darkgray;
+    font-size: 1.5vw;
+}
+
+footer .social_platform_icons_container{
+    /*Set the element to flex and make elements show in column with spaced formating*/
+    padding: 1% 0% 1% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+footer .logo_link_insta {
+    /*Set the element image with css for link to work correctly*/
+    background-image: url("../resources/instagram logo.png");
+    background-size: contain;
+    width: 5vw;
+    height: 5vw;
+}
+
+footer .logo_link_fb {
+    /*Set the element image with css for link to work correctly*/
+    background-image: url("../resources/facebook logo.png");
+    background-size: contain;
+    width: 5vw;
+    height: 5vw;
+}
+
